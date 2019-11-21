@@ -49,6 +49,7 @@ public class LoginServiceTest {
         }
     }
 
+    @Test
     public void testAllLoginsEmpty() throws Exception {
         List<String> all1 = new ArrayList<>();
         if(all1.isEmpty() == false){
