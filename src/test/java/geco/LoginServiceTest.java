@@ -57,6 +57,12 @@ public class LoginServiceTest {
     }
 
     @Test
-    public void findAllLogins() {
+    public void findAllLogins() throws Exception {
+        String[] login = {};
+        LoginService all = new LoginService(login);
+        List<String> test = all.findAllLogins();
+        if(test == null){
+            throw new Exception();
+        }
     }
 }
