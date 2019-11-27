@@ -10,7 +10,7 @@ public class LoginGenerator {
 
     private LoginService loginService;
 
-    /**
+        /**
      * Construit un login generator
      * @param loginService le service de login
      */
