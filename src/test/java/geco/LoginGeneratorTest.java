@@ -16,12 +16,17 @@ public class LoginGeneratorTest {
     }
 
     @Test
-    public void generateLoginForNomAndPrenom() {
-        ArrayList <String> essai = new ArrayList<>();
-        LoginService ajout = null;
-        LoginGenerator login = new LoginGenerator(ajout);
-        essai.add("jean");
-        essai.add("val");
+    public void generateLoginForNomAndPrenom(){
+        String[] ajouts ={"e1","e2"};
+        String verif = new String("PDUR");
+        LoginService service = new LoginService(ajouts);
+        LoginGenerator test = new LoginGenerator(service);
+        test.generateLoginForNomAndPrenom("Paul","Durand");
+        /**
+         * les deux sont des objets donc ca marche
+         */
+        test.equals(verif);
+
     }
 
     public void testChaine(){
@@ -34,12 +39,6 @@ public class LoginGeneratorTest {
     }
 
     public void testAllLoginsFull() throws Exception {
-        String[] login = {};
-       LoginService all = new LoginService(login);
-       List<String> test = all.findAllLogins();
-       if(test == null){
-           throw new Exception();
-       }
     }
 
 }
